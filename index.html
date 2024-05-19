@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calculator">
+    <div class="container">
         <h1>Kalkulator Sederhana</h1>
-        <input type="number" id="num1" placeholder="Masukkan bilangan pertama">
-        <input type="number" id="num2" placeholder="Masukkan bilangan kedua">
-        <button onclick="calculate()">Hitung</button>
-        <div class="results">
-            <p>+) Penjumlahan____  <span id="additionResult"></span></p>
-            <p>-) Pengurangan____  <span id="subtractionResult"></span></p>
-            <p>x) Perkalian_______     <span id="multiplicationResult"></span></p>
-            <p>/) Pembagian______     <span id="divisionResult"></span></p>
+    
+       
+        <div class="calculator">
+            <input type="number" id="num1" placeholder="Masukkan bilangan pertama">
+            <input type="number" id="num2" placeholder="Masukkan bilangan kedua">
+            <button onclick="calculate()">Hitung</button>
+            <div id="results">
+                <p id="addition"></p>
+                <p id="subtraction"></p>
+                <p id="multiplication"></p>
+                <p id="division"></p>
+            </div>
         </div>
+        <h5>Dea Zahari_2120226_UTS_2.6C</h5>
     </div>
     <script src="script.js"></script>
 </body>
