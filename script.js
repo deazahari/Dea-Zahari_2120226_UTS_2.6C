@@ -1,19 +1,19 @@
 function calculate() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
 
     if (isNaN(num1) || isNaN(num2)) {
-        alert('Masukkan kedua bilangan dengan benar!');
+        alert('Harap masukkan bilangan yang valid.');
         return;
     }
 
-    const addition = num1 + num2;
-    const subtraction = num1 - num2;
-    const multiplication = num1 * num2;
-    const division = num1 / num2;
+    var addition = num1 + num2;
+    var subtraction = num1 - num2;
+    var multiplication = num1 * num2;
+    var division = (num2 !== 0) ? (num1 / num2).toFixed(2) : 'Tidak dapat dibagi dengan nol';
 
-    document.getElementById('additionResult').innerText = addition;
-    document.getElementById('subtractionResult').innerText = subtraction;
-    document.getElementById('multiplicationResult').innerText = multiplication;
-    document.getElementById('divisionResult').innerText = division;
+    document.getElementById('addition').innerText = `Penjumlahan: ${addition}`;
+    document.getElementById('subtraction').innerText = `Pengurangan: ${subtraction}`;
+    document.getElementById('multiplication').innerText = `Perkalian: ${multiplication}`;
+    document.getElementById('division').innerText = `Pembagian: ${division}`;
 }
