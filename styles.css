@@ -1,55 +1,61 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f0f0f0;
     margin: 0;
 }
 
-.calculator {
-    background-color: #ffffff;
-    padding: 20px;
+.container {
+    background: white;
+    padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.calculator h1 {
+h1 {
     margin-bottom: 20px;
-    color: #333;
 }
 
 .calculator input {
-    width: 70%;
+    width: calc(100% - 22px);
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
 .calculator button {
-    width: 74%;
+    width: 100%;
     padding: 10px;
-    background-color: #28a745;
-    color: #fff;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
 }
 
 .calculator button:hover {
-    background-color: #218838;
+    background-color: #45a049;
 }
 
-.results {
-    margin-top: 20px;
+#results {
+    display: flex;
+    justify-content: space-between;
 }
 
-.results p {
-    font-size: 18px;
-    color: #333;
+#results p {
+    flex-basis: 48%; /* Membuat p menjadi 48% dari lebar container */
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#results p:nth-child(odd) {
+    background-color: #e0e0e0;
 }
